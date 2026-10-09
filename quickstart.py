@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-本地大模型图书馆 - 快速起步脚本 v1.29.1
+本地大模型图书馆 - 快速起步脚本 v1.29.2
 依赖:
   - Ollama 已安装并运行 (localhost:11434)
   - Python 库: requests (安装: pip install requests)
@@ -31,7 +31,35 @@ except ImportError:
     print("       (或使用: python -m pip install requests)")
     sys.exit(1)
 
-OLLAMA_BASE = os.environ.get("OLLAMA_BASE", "http://localhost:11434")
+def _validate_ollama_base(base):
+    """校验 OLLAMA_BASE 指向本地/私网，避免被环境变量劫持指向任意主机（SSRF 面）。
+
+    允许：localhost / 127.0.0.1 / ::1 / 私网段(10.x / 172.16-31.x / 192.168.x) / *.local
+    如确需连接远程 Ollama，请显式设置环境变量 ALLOW_REMOTE_OLLAMA=1。
+    """
+    import ipaddress
+    from urllib.parse import urlparse
+    host = (urlparse(base).hostname or "").lower()
+    if not host:
+        return base
+    if host in ("localhost", "127.0.0.1", "::1") or host.endswith(".local"):
+        return base
+    try:
+        ip = ipaddress.ip_address(host)
+        if ip.is_loopback or ip.is_private:
+            return base
+    except ValueError:
+        pass
+    if os.environ.get("ALLOW_REMOTE_OLLAMA", "").lower() in ("1", "true", "yes"):
+        print(f"[警告] OLLAMA_BASE 指向非本地主机 {host}（已由 ALLOW_REMOTE_OLLAMA=1 显式放行）")
+        return base
+    print(f"[安全] 已拒绝 OLLAMA_BASE 指向非本地主机: {host}")
+    print("       默认仅允许 localhost / 127.0.0.1 / 私网地址。")
+    print("       如确需连接远程 Ollama，请显式设置环境变量 ALLOW_REMOTE_OLLAMA=1 后重试。")
+    sys.exit(2)
+
+
+OLLAMA_BASE = _validate_ollama_base(os.environ.get("OLLAMA_BASE", "http://localhost:11434"))
 OLLAMA_URL = f"{OLLAMA_BASE}/api/generate"
 MODEL = os.environ.get("LLM_MODEL", "qwen2.5:3b")
 LIBRARY_DIR = os.environ.get("LIBRARY_DIR", "my-library")
