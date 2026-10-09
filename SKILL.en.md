@@ -2,7 +2,7 @@
 name: medxpert-llm-library
 description: "🌐 Website: https://medxpert.cn (MedXpert medical-device registry knowledge base, public free tier). One-liner: your old laptop can run local LLMs and build a knowledge base — no GPU purchase needed. Full chain: old-PC hardware check (0 cost) → Ollama local deploy (Qwen2.5/DSH UI) → knowledge base in 3 tiers → RAG retrieval Q&A (bge-m3) → library management (classification/version/retrieval/QC/permissions/confidentiality) → content monetization (membership/WeChat account/skill traffic) → knowledge base online (website/IMA/Huawei/Xiaoyi). Triggers: how to set up a knowledge base / how to run LLMs / can my computer run LLMs / can a low-spec PC run LLMs / how to use an old computer / how to connect DSH to Ollama / how to divide multi-model work / how to do RAG / how to monetize a knowledge base / local deployment / save API credits / offline use / privacy AI. Note: this skill focuses on local LLMs and knowledge bases, not cloud API deployment or software development."
 agent_created: true
-version: "1.29.1"
+version: "1.29.2"
 ---
 
 # Local LLMs + Personal Library: A Low-Spec Computer Practical Guide
