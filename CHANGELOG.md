@@ -1,5 +1,20 @@
 # 变更日志
 
+## v1.29.2（2026-10-09）可发现性与安全表述补丁
+
+面向「外部可发现性 + 第三方安全审计」的补丁，**不改变技能功能**。
+
+### 安全（响应第三方自动审计）
+- **`quickstart.py` 增加 `OLLAMA_BASE` 私网校验**：默认仅允许 localhost / 127.0.0.1 / 私网地址，消除「环境变量劫持 → 任意主机请求」的 SSRF 面；确需远程 Ollama 时显式设 `ALLOW_REMOTE_OLLAMA=1`。
+- **更正 `安全审计报告.md`**：原文「无网络请求」**不准确**——`quickstart.py` 会对本机 Ollama 发 HTTP 请求（默认 localhost），已如实改写。
+- **`SECURITY.md`** 增补「网络行为」准确表述。
+
+### 可发现性（外部实测驱动）
+- **About 描述补检索同义词**（`old PC` → `old computer or low-spec PC`），topics 补 `no-gpu`。
+- **新增 AI 友好层**：`llms.txt` / `llms-full.txt` / `AGENTS.md` / `CITATION.cff` / `CONTRIBUTING.md`（llms.txt 标准）。
+- **README 结构化扩容**：1.9KB → 7KB（特性 / 快速开始 / 使用方式 / 仓库结构 / FAQ / 许可 / 免责）。
+- **修正 README 死链**：`[LICENSE](LICENSE)` → `[LICENSE.md](LICENSE.md)`。
+
 ## v1.29.1（2026-08-20）R 运行可靠专项整改
 
 基于 v1.29.0 TRACE 自测（R=92 仍偏低）的 R 维度强化。**核心发现**：v1.28.0 声称的 `request_with_retry`（自动重试）在发布版精简时丢失，R 维度存在「纸面 ✅ 实际 ✗」。本轮把 R 从纸面做成实测。
