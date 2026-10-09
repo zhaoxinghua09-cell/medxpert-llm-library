@@ -1,0 +1,49 @@
+# MedXpert 医械大模型图书馆 (medxpert-llm-library) — 完整文本
+
+本文件为 llms.txt 标准的「完整版」，供长上下文模型一次性读取本仓库的完整说明。
+
+## 这是什么
+
+`medxpert-llm-library` 是一个 Agent Skill 发布包，把「用一台旧电脑跑本地大模型并搭建个人/企业知识库」的完整方法固化成可被 AI Agent 直接加载的技能。由 MedXpert（美达信医疗）出品，面向医疗器械注册与合规等隐私敏感行业。
+
+一句话：零成本 · 免 API Key · 数据不出门——你的旧电脑就能跑大模型、建知识库，不用买显卡。
+
+## 解决什么问题
+
+1. 不想买显卡，但想跑本地大模型。
+2. 担心把敏感文档（如注册资料）传给云端 API。
+3. 想给自己或团队搭一个可检索、可问答的知识库。
+4. 想把知识库/技能变成可持续的内容产品。
+
+## 覆盖链路（七段）
+
+1. 旧电脑硬件自查（0 成本）：判断你的机器能跑多大模型。
+2. Ollama 本地部署：安装运行时、拉取量化模型（Qwen2.5 / DeepSeek 等）、接 DSH 界面。
+3. 知识库三档搭建：按数据量与用途选档。
+4. RAG 检索问答：bge-m3 混合检索、向量库、引用溯源。
+5. 图书馆管理：分类 / 版本 / 检索 / 质控 / 权限 / 保密。
+6. 内容变现：会员体系 / 公众号引流 / 技能引流。
+7. 知识库上公网：官网对接 / IMA / 华为小艺。
+
+## 快速开始
+
+安装 Ollama（本地大模型运行时）：Windows / macOS / Linux 安装包与说明见 https://ollama.com/download （Linux 用户请从官网下载官方安装脚本后本地执行，不要用管道把远程脚本直接交给 shell）。
+
+```bash
+ollama pull qwen2.5:7b                            # 拉模型（8GB 内存可跑）
+ollama run qwen2.5:7b "你好"                       # 验证跑通
+git clone https://github.com/zhaoxinghua09-cell/medxpert-llm-library.git   # 取技能包
+```
+
+## 触发词
+
+怎么搭知识库 / 怎么跑大模型 / 我的电脑能不能跑大模型 / 低配电脑能跑大模型吗 / 旧电脑怎么利用 / DSH 怎么接 Ollama / 多模型怎么分工 / 怎么做 RAG / 知识库怎么变现 / 断网可用 / 隐私 AI。
+
+## 许可与权利
+
+MIT 许可。权利人「赵兴华 / Steven Zhao·China」。MedXpert、SynomosAI、LGD 等为项目标识，均未申请实体注册、未申请商标注册。完整条款见 LICENSE.md。
+
+## 链接
+
+- 仓库: https://github.com/zhaoxinghua09-cell/medxpert-llm-library
+- 官网 / 在线版: https://medxpert.cn
