@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this skill pack, please cite it as below."
+title: "MedXpert 医械大模型图书馆 (medxpert-llm-library)"
+abstract: "面向旧电脑/低配机器的本地大模型与知识库搭建 Agent Skill：零成本、免 API Key、数据不出门。"
+type: software
+authors:
+  - family-names: "Zhao"
+    given-names: "Xinghua"
+    alias: "Steven Zhao·China"
+    orcid: "https://orcid.org/0009-0001-0512-1237"
+license: MIT
+version: "1.29.1"
+date-released: "2026-08-28"
+repository-code: "https://github.com/zhaoxinghua09-cell/medxpert-llm-library"
+url: "https://medxpert.cn"
+keywords:
+  - local-llm
+  - knowledge-base
+  - rag
+  - ollama
+  - offline-ai
+  - privacy
+  - self-hosted
+  - agent-skill
+  - medical-device
+  - regulatory
