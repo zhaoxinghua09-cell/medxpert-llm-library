@@ -4,7 +4,7 @@
 [![Agent Skill](https://img.shields.io/badge/Agent%20Skill-SKILL.md-blue.svg)](SKILL.md)
 [![Local-first](https://img.shields.io/badge/local--first-offline%20friendly-2ea44f.svg)](#)
 [![No API Key](https://img.shields.io/badge/no-API%20key-orange.svg)](#)
-[![Version](https://img.shields.io/badge/version-1.29.1-informational.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.29.2-informational.svg)](CHANGELOG.md)
 [![LLM](https://img.shields.io/badge/LLM-Ollama%20%7C%20Qwen%20%7C%20DeepSeek-8a2be2.svg)](#)
 [![Homepage](https://img.shields.io/badge/home-medxpert.cn-0078d4.svg)](https://medxpert.cn)
 
@@ -119,7 +119,7 @@ medxpert-llm-library/
 - **品牌状态限定**：MedXpert、SynomosAI、LGD 等为相关项目标识，
   **均未申请实体注册、未申请商标注册**；出现仅作来源标识，
   不构成对法人实体或商标权的任何主张。
-- **完整条款**：见仓库根目录 [LICENSE](LICENSE)。
+- **完整条款**：见仓库根目录 [LICENSE.md](LICENSE.md)。
 - **联系**：zhaoxinghua06@126.com ｜ ORCID 0009-0001-0512-1237
 
 ---
