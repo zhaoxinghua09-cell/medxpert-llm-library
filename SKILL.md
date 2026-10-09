@@ -4,7 +4,7 @@ displayName: MedXpert医械大模型图书馆
 slug: medxpert-llm-library
 author: 注册老炮@MedXpert
 copyright: MedXpert
-version: 1.29.1
+version: 1.29.2
 license: MIT
 description: 零成本 · 免 API Key · 数据不出门——你的旧电脑就能跑大模型、建知识库，不用买显卡（在线版 https://medxpert.cn）
 agent_created: true
