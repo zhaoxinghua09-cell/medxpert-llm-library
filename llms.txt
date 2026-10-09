@@ -1,0 +1,27 @@
+# MedXpert 医械大模型图书馆 (medxpert-llm-library)
+
+> 一台旧电脑就能跑本地大模型、搭个人/企业知识库的 Agent Skill：零成本、免 API Key、数据不出门。覆盖 硬件自查 → Ollama 部署 → 知识库搭建 → RAG 问答 → 图书馆管理 → 内容变现 → 上公网 全链路。
+
+`medxpert-llm-library` 是一个遵循 Agent Skills 规范的技能发布包，面向「低配 / 旧电脑 + 本地大模型 + 知识库」场景，尤其适合医疗器械注册与合规等隐私敏感行业。支持 Windows / Linux / macOS / 树莓派 / Docker，多语种（中英日韩西法德阿）。
+
+## 核心
+
+- [SKILL.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/SKILL.md): 技能主文件（YAML frontmatter + 全量方法）
+- [manifest.json](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/manifest.json): 技能元数据（名称 / 版本 / 许可 / 描述）
+- [quickstart.py](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/quickstart.py): 一键自检与起步脚本
+- [README.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/README.md): 项目说明与快速开始
+
+## 可选
+
+- [SKILL.en.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/SKILL.en.md): 英文版技能说明
+- [AGENTS.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/AGENTS.md): 给 AI Agent 的工作指引
+- [llms-full.txt](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/llms-full.txt): 完整文本（供长上下文模型）
+- [CHANGELOG.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/CHANGELOG.md): 版本历史
+- [SECURITY.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/SECURITY.md): 安全策略
+- [CONTRIBUTING.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/CONTRIBUTING.md): 贡献指南
+- [CITATION.cff](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/CITATION.cff): 引用信息
+- [LICENSE.md](https://github.com/zhaoxinghua09-cell/medxpert-llm-library/blob/main/LICENSE.md): MIT 许可
+
+## 在线
+
+- 官网 / 在线版: https://medxpert.cn
